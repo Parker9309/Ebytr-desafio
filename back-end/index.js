@@ -7,4 +7,6 @@ const port = process.env.PORT;
 app.use(express.json());
 
 app.use("/task", taskController);
+app.use("/task/:id", taskController);
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
