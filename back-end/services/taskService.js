@@ -10,7 +10,13 @@ const createTasks = async (tasks) => {
   return created;
 };
 
+const updateTask = async (tasks, id) => {
+  const updated = await taskModel.updateTask(tasks, id);
+  return updated;
+};
+
 module.exports = {
   getTasks,
   createTasks,
+  updateTask,
 };

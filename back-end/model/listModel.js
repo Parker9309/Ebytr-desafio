@@ -1,8 +1,9 @@
 const { getConnection } = require("./connnection");
+const { ObjectId } = require("mongodb");
 
 const getAllLists = async () => {
   const db = await getConnection();
-  const allLists = await db.collection("tasks").find();
+  const allLists = await db.collection("tasks").find({}).toArray();
   return allLists;
 };
 
@@ -16,7 +17,35 @@ const addTask = async (tasks) => {
   return { _id: addTasks.insertedId, tasks };
 };
 
+const updateTask = async (tasks, id) => {
+  const db = await getConnection();
+  const findId = await db.collection("tasks").findOne({ _id: ObjectId(id) });
+  console.log(
+    "🚀 ~ file: listModel.js ~ line 23 ~ updateTask ~ findId",
+    findId
+  );
+
+  if (!findId) {
+    return false;
+  }
+
+  const updateTasks = await db
+    .collection("tasks")
+    .updateOne({ _id: ObjectId(id) }, { $set: { tasks } });
+
+  if (!updateTasks) {
+    console.log(
+      "🚀 ~ file: listModel.js ~ line 34 ~ updateTask ~ updateTasks",
+      updateTasks
+    );
+    return false;
+  }
+
+  return { _id: ObjectId(id), tasks };
+};
+
 module.exports = {
   getAllLists,
   addTask,
+  updateTask,
 };

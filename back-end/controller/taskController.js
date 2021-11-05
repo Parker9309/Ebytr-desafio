@@ -28,4 +28,16 @@ route.post("/tasks", async (req, res) => {
   }
 });
 
+route.put("/tasks/:id", async (req, res) => {
+  try {
+    const { tasks } = req.body;
+    const { id } = req.params;
+
+    const updatedTasks = await taskService.updateTask(tasks, id);
+    return res.status(StatusCodes.OK).json(updatedTasks);
+  } catch (e) {
+    console.log("Erro", e);
+  }
+});
+
 module.exports = route;
