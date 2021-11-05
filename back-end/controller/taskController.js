@@ -40,4 +40,15 @@ route.put("/tasks/:id", async (req, res) => {
   }
 });
 
+route.delete("/tasks/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedTasks = await taskService.deleteTask(id);
+    return res.status(StatusCodes.OK).json(deletedTasks);
+  } catch (e) {
+    console.log("Erro", e);
+  }
+});
+
 module.exports = route;
