@@ -44,7 +44,7 @@ npm install
     
 ## Desenvolvedor do Projeto:
 
- <br> <H3> Juan Pablo </H3>](https://github.com/Parker9309)
+ <br> <H3> Juan Pablo </H3>(https://github.com/Parker9309)
 <a href="https://www.linkedin.com/in/juan-pablo-martins-3bb90a198/" target="_blank">
   ### Links para a criação do README.md:
   - [Markdown Guide](https://www.markdownguide.org/basic-syntax/);
