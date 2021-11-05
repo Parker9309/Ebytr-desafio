@@ -40,8 +40,8 @@ npm install
 ## Desenvolvedor do Projeto:
 [<img src="https://avatars.githubusercontent.com/u/78616965?v=4" width=110> <br> <sub> Juan Pablo </sub>](https://github.com/Parker9309)
 | :---: |
-<a href="https://www.linkedin.com/in/juan-pablo-martins-3bb90a198/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-### Links para a criação do README.md:
+<a href="https://www.linkedin.com/in/juan-pablo-martins-3bb90a198/" target="_blank">
+  ### Links para a criação do README.md:
   - [Markdown Guide](https://www.markdownguide.org/basic-syntax/);
   - [README.md GitHub](https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509);
   - https://github.com/MarianaSavoldi
